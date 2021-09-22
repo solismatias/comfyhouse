@@ -164,6 +164,8 @@ a:visited{
 .img-container {
   position: relative;
   overflow: hidden;
+  height: 192px;
+  object-fit: cover;
 }
 .bag-btn {
   position: absolute;
