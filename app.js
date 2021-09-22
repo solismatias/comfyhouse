@@ -15,6 +15,8 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
+const menuBtn = document.querySelector(".fa-bars")
+const menu = document.querySelector(".menu-container")
 
 // const btns = document.querySelectorAll(".bag-btn") NO llamamos a los botones aca, porque se cargan y quedan vacios porque los llamamos antes que los productos sean cargados
 
@@ -137,11 +139,15 @@ class UI {
     cartOverlay.classList.add("transparentBcg");
     cartDOM.classList.add("showCart");
   }
+  showOrHideMenu() {
+    menu.classList.toggle("menu-show")
+  }
   setupAPP() {
     cart = Storage.getCart(); // 2:45:00
     this.setCartValues(cart);
     this.populateCart(cart);
     cartBtn.addEventListener("click", this.showCart);
+    menuBtn.addEventListener("click", this.showOrHideMenu);
     closeCartBtn.addEventListener("click", this.hideCart);
   }
   populateCart(cart) {
