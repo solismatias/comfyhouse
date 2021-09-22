@@ -23,6 +23,9 @@ a:link{
   color: var(--mainBlack);
   text-decoration: none;
 }
+a:visited{
+  color: var(--mainBlack);
+}
 
 /* --------------- Navbar ---------------- */
 .navbar {
