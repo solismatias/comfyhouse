@@ -310,12 +310,19 @@ a:visited{
 
 /* --------------- End of Cart ---------------- */
 .footer {
+  display: flex;
   background: var(--primaryColor);
   height: 40px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.footer p {
+  justify-self: flex-start;
+  margin-left: 5px;
+  color: #68492d;;
 }
 
 .logo-github {
@@ -325,7 +332,9 @@ a:visited{
 
 .footer-repo {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* justify-self: center; */
   font-size: 1.3rem;
+  margin-right: 5px;
 }
