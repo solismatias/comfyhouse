@@ -19,11 +19,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-a:link{
+a:link {
   color: var(--mainBlack);
   text-decoration: none;
 }
-a:visited{
+a:visited {
   color: var(--mainBlack);
 }
 /* --------------- Navbar ---------------- */
@@ -64,7 +64,7 @@ a:visited{
   border-radius: 30%;
   color: var(--mainWhite);
 }
-.menu-container{
+.menu-container {
   position: fixed;
   top: 60px;
   width: 18vw;
@@ -72,19 +72,20 @@ a:visited{
   max-width: 300px;
   min-width: 200px;
   background-color: var(--primaryColor);
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
   transform: translateY(-2em);
-  visibility: hidden; 
+  visibility: hidden;
   opacity: 0;
 }
-.menu-show{
+.menu-show {
   top: 60px;
   opacity: 1;
   visibility: visible;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
 }
-.menu-ul{
+.menu-ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -98,10 +99,62 @@ a:visited{
   padding: 5px 0;
   width: 100%;
 }
-.menu-ul li:hover{
-  background-color: #eeaa6b;    
+.menu-ul li:hover {
+  background-color: #eeaa6b;
 }
 /* --------------- End of Navbar ---------------- */
+
+/* --------------- About ---------------- */
+.about-container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--primaryColor);
+}
+.about-hide {
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
+  transform: translateY(-2em);
+  visibility: hidden;
+  opacity: 0;
+}
+.about-title {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.about-text {
+  padding: 0 35px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.about-btn {
+  padding: 1rem 3rem;
+  margin: 30px 0;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background-color: var(--mainGrey);
+  color: var(--mainBlack);
+  border: 1px solid var(--mainGrey);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  width: 200px;
+}
+.about-btn:hover {
+  background: transparent;
+  color: var(--mainGrey);
+}
+
+/* --------------- About end ---------------- */
+
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
@@ -115,7 +168,6 @@ a:visited{
   background: rgba(255, 255, 255, 0.8);
   display: inline-block;
   padding: 2rem;
-
 }
 .banner-title {
   font-size: 3.4rem;
@@ -251,6 +303,13 @@ a:visited{
     width: 30vw;
     min-width: 450px;
   }
+  .about-container {
+    top: 120px;
+    /* width: 60%; */
+    height: 80%;
+    max-width: 500px;
+    margin-left: calc(50vw - 250px);
+  }
 }
 
 .close-cart {
@@ -322,7 +381,7 @@ a:visited{
 .footer p {
   justify-self: flex-start;
   margin-left: 20px;
-  color: #68492d;;
+  color: #68492d;
 }
 
 .logo-github {

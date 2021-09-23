@@ -15,10 +15,13 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
-const menuBtn = document.querySelector(".fa-bars")
-const menu = document.querySelector(".menu-container")
-const menuIcon = document.querySelector(".fa-bars")
-const hero = document.querySelector(".hero")
+const menuBtn = document.querySelector(".fa-bars");
+const menu = document.querySelector(".menu-container");
+const menuIcon = document.querySelector(".fa-bars");
+const hero = document.querySelector(".hero");
+const about = document.querySelector(".about-container");
+const aboutCloseBtn = document.querySelector(".about-btn");
+const aboutShowBtn = document.querySelector(".about-show");
 
 // const btns = document.querySelectorAll(".bag-btn") NO llamamos a los botones aca, porque se cargan y quedan vacios porque los llamamos antes que los productos sean cargados
 
@@ -142,29 +145,37 @@ class UI {
     cartDOM.classList.add("showCart");
   }
   showOrHideMenu() {
-    menu.classList.toggle("menu-show")
+    menu.classList.toggle("menu-show");
     if (menuIcon.classList.contains("fa-bars")) {
-      menuIcon.classList.remove("fa-bars")
-      menuIcon.classList.add("fa-times")
+      menuIcon.classList.remove("fa-bars");
+      menuIcon.classList.add("fa-times");
     } else {
-      menuIcon.classList.remove("fa-times")
-      menuIcon.classList.add("fa-bars")
+      menuIcon.classList.remove("fa-times");
+      menuIcon.classList.add("fa-bars");
     }
   }
   slider() {
     function imgNum() {
-      return Math.floor(Math.random() * (9 - 1) + 1)
+      return Math.floor(Math.random() * (9 - 1) + 1);
     }
-  return `url("./images/product-${imgNum()}.jpeg") center/cover no-repeat`
+    return `url("./images/product-${imgNum()}.jpeg") center/cover no-repeat`;
+  }
+  hideAbout() {
+    about.classList.add("about-hide");
+  }
+  showAbout() {
+    about.classList.remove("about-hide");
   }
   setupAPP() {
     cart = Storage.getCart(); // 2:45:00
     this.setCartValues(cart);
     this.populateCart(cart);
     cartBtn.addEventListener("click", this.showCart);
-    menuBtn.addEventListener("click", this.showOrHideMenu);
     closeCartBtn.addEventListener("click", this.hideCart);
-    hero.style.background =  this.slider()
+    menuBtn.addEventListener("click", this.showOrHideMenu);
+    aboutCloseBtn.addEventListener("click", this.hideAbout);
+    aboutShowBtn.addEventListener("click", this.showAbout);
+    hero.style.background = this.slider();
   }
   populateCart(cart) {
     cart.forEach((item) => this.addCartItem(item));
