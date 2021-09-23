@@ -91,7 +91,7 @@ class UI {
         button.disabled = true;
       }
       button.addEventListener("click", (event) => {
-        event.target.innerText = " in the kart";
+        event.target.innerText = "en el carrito";
         event.target.disabled = true;
         // obtener productos de Products
         let cartItem = { ...Storage.getProducts(id), amount: 1 };
