@@ -18,6 +18,7 @@ const productsDOM = document.querySelector(".products-center");
 const menuBtn = document.querySelector(".fa-bars")
 const menu = document.querySelector(".menu-container")
 const menuIcon = document.querySelector(".fa-bars")
+const hero = document.querySelector(".hero")
 
 // const btns = document.querySelectorAll(".bag-btn") NO llamamos a los botones aca, porque se cargan y quedan vacios porque los llamamos antes que los productos sean cargados
 
@@ -150,6 +151,12 @@ class UI {
       menuIcon.classList.add("fa-bars")
     }
   }
+  slider() {
+    function imgNum() {
+      return Math.floor(Math.random() * (9 - 1) + 1)
+    }
+  return `url("./images/product-${imgNum()}.jpeg") center/cover no-repeat`
+  }
   setupAPP() {
     cart = Storage.getCart(); // 2:45:00
     this.setCartValues(cart);
@@ -157,6 +164,7 @@ class UI {
     cartBtn.addEventListener("click", this.showCart);
     menuBtn.addEventListener("click", this.showOrHideMenu);
     closeCartBtn.addEventListener("click", this.hideCart);
+    hero.style.background =  this.slider()
   }
   populateCart(cart) {
     cart.forEach((item) => this.addCartItem(item));
