@@ -34,8 +34,15 @@ a:visited {
   width: 100%;
   display: flex;
   align-items: center;
-  background: rgb(231, 226, 221);
+  /* background: rgb(231, 226, 221); */
   z-index: 1;
+
+  /* lo de abajo esta generado con ui.glass/generator */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(240, 157, 81, 0.38);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .navbar-center {
   width: 100%;
@@ -116,7 +123,14 @@ a:visited {
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--primaryColor);
+  /* background-color: var(--primaryColor); */
+
+  /* lo de abajo esta generado con ui.glass/generator */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(240, 157, 81, 0.38);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .about-hide {
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
@@ -166,9 +180,16 @@ a:visited {
 }
 .banner {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   display: inline-block;
   padding: 5%;
+
+  /* lo de abajo esta generado con ui.glass/generator */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(240, 157, 81, 0.38);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .banner-title {
   font-size: 3rem;
@@ -298,6 +319,12 @@ a:visited {
 }
 .transparentBcg {
   visibility: visible;
+  /* lo de abajo esta generado con ui.glass/generator */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(240, 157, 81, 0.38);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 @media screen and (min-width: 768px) {
   .cart {
