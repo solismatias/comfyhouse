@@ -17,6 +17,7 @@ const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
 const menuBtn = document.querySelector(".fa-bars");
 const menu = document.querySelector(".menu-container");
+const menuUl = document.querySelector(".menu-ul");
 const menuIcon = document.querySelector(".fa-bars");
 const hero = document.querySelector(".hero");
 const about = document.querySelector(".about-container");
@@ -176,6 +177,7 @@ class UI {
     aboutCloseBtn.addEventListener("click", this.hideAbout);
     aboutShowBtn.addEventListener("click", this.showAbout);
     hero.style.background = this.slider();
+    menuUl.addEventListener("click", this.showOrHideMenu);
   }
   populateCart(cart) {
     cart.forEach((item) => this.addCartItem(item));
