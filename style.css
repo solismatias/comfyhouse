@@ -34,14 +34,12 @@ a:visited {
   width: 100%;
   display: flex;
   align-items: center;
-  /* background: rgb(231, 226, 221); */
   z-index: 1;
 
   /* lo de abajo esta generado con ui.glass/generator */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(240, 157, 81, 0.38);
-  /* border-radius: 12px; */
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .navbar-center {
@@ -123,13 +121,11 @@ a:visited {
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
-  /* background-color: var(--primaryColor); */
 
   /* lo de abajo esta generado con ui.glass/generator */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(240, 157, 81, 0.38);
-  /* border-radius: 12px; */
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .about-hide {
@@ -173,22 +169,18 @@ a:visited {
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
-  /* background: url("./images/hero-bcg.jpeg") center/cover no-repeat; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .banner {
   text-align: center;
-  /* background: rgba(255, 255, 255, 0.8); */
   display: inline-block;
   padding: 5%;
-
   /* lo de abajo esta generado con ui.glass/generator */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(240, 157, 81, 0.38);
-  /* border-radius: 12px; */
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .banner-title {
@@ -319,24 +311,10 @@ a:visited {
 }
 .transparentBcg {
   visibility: visible;
-  /* lo de abajo esta generado con ui.glass/generator */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(240, 157, 81, 0.38);
-  /* border-radius: 12px; */
   border: 1px solid rgba(255, 255, 255, 0.125);
-}
-@media screen and (min-width: 768px) {
-  .cart {
-    width: 30vw;
-    min-width: 450px;
-  }
-  .about-container {
-    top: 5vh;
-    height: 80%;
-    max-width: 500px;
-    margin-left: calc(50vw - 250px);
-  }
 }
 
 .close-cart {
@@ -395,6 +373,8 @@ a:visited {
 }
 
 /* --------------- End of Cart ---------------- */
+
+/* --------------- Footer ---------------- */
 .footer {
   display: flex;
   background: var(--primaryColor);
@@ -418,9 +398,113 @@ a:visited {
 
 .footer-repo {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* justify-self: center; */
   font-size: 1.3rem;
   margin-right: 20px;
+}
+/* --------------- Footer End---------------- */
+
+/* --------------- Formulario---------------- */
+.formulario {
+  position: fixed;
+  top: 0;
+  margin-top: 60px;
+  width: 100vw;
+  background-color: var(--primaryColor);
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* lo de abajo esta generado con ui.glass/generator */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(240, 157, 81, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--mainWhite);
+  height: 40px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.formulario input {
+  width: 98%;
+  height: inherit;
+  border: none;
+}
+.formulario label {
+  align-self: flex-start;
+  margin-left: 5%;
+}
+
+.formulario .fa-times {
+  align-self: flex-end;
+  margin: 4%;
+  font-size: 1.5rem;
+}
+.formulario .fa-times:hover {
+  cursor: pointer;
+}
+
+.fa-envelope,
+.fa-user {
+  font-size: 1.5rem;
+  margin: 0 1%;
+}
+.formulario textarea {
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-btn {
+  padding: 1rem 3rem;
+  margin: 30px 0;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background-color: var(--mainGrey);
+  color: var(--mainBlack);
+  border: 1px solid var(--mainGrey);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  width: 200px;
+}
+.form-btn:hover {
+  background: transparent;
+  color: var(--mainGrey);
+}
+
+.formulario-hide {
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
+  transform: translateY(-2em);
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* --------------- Formulario end---------------- */
+
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+  .about-container {
+    top: 5vh;
+    height: 80%;
+    max-width: 500px;
+    margin-left: calc(50vw - 250px);
+  }
+  .formulario {
+    top: 5vh;
+    height: 80%;
+    max-width: 500px;
+    margin-left: calc(50vw - 250px);
+  }
 }

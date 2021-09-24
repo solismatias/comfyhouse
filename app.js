@@ -23,6 +23,10 @@ const hero = document.querySelector(".hero");
 const about = document.querySelector(".about-container");
 const aboutCloseBtn = document.querySelector(".about-btn");
 const aboutShowBtn = document.querySelector(".about-show");
+const form = document.querySelector(".formulario");
+const formCloseBtn = document.querySelector(".close-form");
+const formShowBtn = document.querySelector(".form-show");
+
 
 // const btns = document.querySelectorAll(".bag-btn") NO llamamos a los botones aca, porque se cargan y quedan vacios porque los llamamos antes que los productos sean cargados
 
@@ -164,6 +168,12 @@ class UI {
   showAbout() {
     about.classList.remove("about-hide");
   }
+  hideForm() {
+    form.classList.add("formulario-hide");
+  }
+  showForm() {
+    form.classList.remove("formulario-hide");
+  }
   setupAPP() {
     cart = Storage.getCart();
     this.setCartValues(cart);
@@ -175,6 +185,8 @@ class UI {
     aboutShowBtn.addEventListener("click", this.showAbout);
     hero.style.background = this.slider();
     menuUl.addEventListener("click", this.showOrHideMenu);
+    formShowBtn.addEventListener("click", this.showForm);
+    formCloseBtn.addEventListener("click", this.hideForm);
   }
   populateCart(cart) {
     cart.forEach((item) => this.addCartItem(item));

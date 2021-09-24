@@ -30,13 +30,13 @@
               <a href="https://github.com/solismatias" target="_blank">Perfil GitHub</a>
             </li>
             <li>
-              <a class="about-show" href="#">Sobre este proyecto</a>
-            </li>
-            <li>
               <a href="https://solismatias.ar/" target="_blank">Mi portafolios</a>
             </li>
             <li>
-              <a href="#">Contáctame</a>
+              <a class="about-show" href="#">Sobre este proyecto</a>
+            </li>
+            <li>
+              <a class="form-show" href="#">Contacto</a>
             </li>
           </ul>
         </div>
@@ -109,8 +109,31 @@
       debitis! Debitis, omnis sapiente.</p>
     <button class="about-btn">Cerrar</button>
   </section>
-
   <!-- About  end-->
+
+
+  <!-- formulario de contacto -->
+  <form class="formulario formulario-hide">
+
+    <i class="fas fa-times close-form"></i>
+    <p class="about-title">Contacto</p>
+    <p>Atencion: el formulario se encuentra deshabilitado, <br> no va a mandar nada</p>
+    <label for="username">Nombre y Apellido</label>
+    <div class="input-container">
+      <i class="fas fa-user"></i>
+      <input type="text" id="username" name="username" placeholder="Nombre">
+    </div>
+    <label for="email">Email</label>
+    <div class="input-container">
+      <i class="fas fa-envelope"></i>
+      <input type="text" id="email" name="email" placeholder="Email">
+    </div>
+    <label for="message">Mensaje</label>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    <button class="form-btn" type="submit">Enviar</button>
+  </form>
+  <!-- formulario de contacto end -->
+
 
   <!-- contentful -->
   <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
