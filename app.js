@@ -26,9 +26,6 @@ const aboutShowBtn = document.querySelector(".about-show");
 
 // const btns = document.querySelectorAll(".bag-btn") NO llamamos a los botones aca, porque se cargan y quedan vacios porque los llamamos antes que los productos sean cargados
 
-// const addToCartBtn = document.querySelector('.bag-btn')
-// const removeCartItemBtn = document.querySelector('.remove-item')
-
 let cart = []; //  carro principal, de aca se van a agregar los productos del carrito
 
 //botones
@@ -168,7 +165,7 @@ class UI {
     about.classList.remove("about-hide");
   }
   setupAPP() {
-    cart = Storage.getCart(); // 2:45:00
+    cart = Storage.getCart();
     this.setCartValues(cart);
     this.populateCart(cart);
     cartBtn.addEventListener("click", this.showCart);
@@ -190,7 +187,7 @@ class UI {
     clearCartBtn.addEventListener("click", () => {
       this.clearCart(); // con la arrow function hago que "this" apunte a la clase
     });
-    // cart functionality
+    // funcionalidad del carrito
     cartContent.addEventListener("click", (event) => {
       if (event.target.classList.contains("remove-item")) {
         let removeItem = event.target;
@@ -267,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // setup app
   ui.setupAPP();
 
-  // get all products
+  // obtenemos todos los productos
   products
     .getProducts()
     .then((products) => {
