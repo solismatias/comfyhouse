@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-
 :root {
   --primaryColor: #f09d51;
   --mainWhite: #fff;
@@ -18,7 +17,6 @@ body {
   background: var(--mainWhite);
   font-family: "Lato", sans-serif;
 }
-
 a:link {
   color: var(--mainBlack);
   text-decoration: none;
@@ -35,7 +33,6 @@ a:visited {
   display: flex;
   align-items: center;
   z-index: 1;
-
   /* lo de abajo esta generado con ui.glass/generator */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -55,7 +52,6 @@ a:visited {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
 .cart-btn {
   position: relative;
   cursor: pointer;
@@ -108,7 +104,6 @@ a:visited {
   background-color: #eeaa6b;
 }
 /* --------------- End of Navbar ---------------- */
-
 /* --------------- About ---------------- */
 .about-container {
   position: fixed;
@@ -121,7 +116,6 @@ a:visited {
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
-
   /* lo de abajo esta generado con ui.glass/generator */
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -145,7 +139,6 @@ a:visited {
   font-size: 1rem;
   font-weight: bold;
 }
-
 .about-btn {
   padding: 1rem 3rem;
   margin: 30px 0;
@@ -163,9 +156,7 @@ a:visited {
   background: transparent;
   color: var(--mainGrey);
 }
-
 /* --------------- About end ---------------- */
-
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
@@ -206,7 +197,6 @@ a:visited {
 }
 /* --------------- End of Hero ---------------- */
 /* --------------- Products ---------------- */
-
 .products {
   padding: 4rem 0;
 }
@@ -272,14 +262,12 @@ a:visited {
   letter-spacing: var(--mainSpacing);
   text-align: center;
 }
-
 .product h4 {
   margin-top: 0.7rem;
   letter-spacing: var(--mainSpacing);
   color: var(--primaryColor);
   text-align: center;
 }
-
 /* ---------------End of Products ---------------- */
 /* --------------- Cart ---------------- */
 .cart-overlay {
@@ -316,7 +304,6 @@ a:visited {
   background-color: rgba(240, 157, 81, 0.38);
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
-
 .close-cart {
   font-size: 1.7rem;
   cursor: pointer;
@@ -361,7 +348,6 @@ a:visited {
   cursor: pointer;
 }
 /*---------- End of Cart Item -------------------- */
-
 .cart-footer {
   margin-top: 2rem;
   letter-spacing: var(--mainSpacing);
@@ -371,7 +357,6 @@ a:visited {
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
-
 /* --------------- End of Cart ---------------- */
 
 /* --------------- Footer ---------------- */
@@ -384,25 +369,21 @@ a:visited {
   align-items: center;
   justify-content: space-between;
 }
-
 .footer p {
   justify-self: flex-start;
   margin-left: 20px;
   color: #68492d;
 }
-
 .logo-github {
   width: 26px;
   margin-left: 5px;
 }
-
 .footer-repo {
   display: flex;
   font-size: 1.3rem;
   margin-right: 20px;
 }
 /* --------------- Footer End---------------- */
-
 /* --------------- Formulario---------------- */
 .formulario {
   position: fixed;
@@ -421,7 +402,6 @@ a:visited {
   background-color: rgba(240, 157, 81, 0.38);
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
-
 .input-container {
   display: flex;
   align-items: center;
@@ -431,7 +411,6 @@ a:visited {
   width: 90%;
   border-radius: 5px;
 }
-
 .formulario input {
   width: 98%;
   height: inherit;
@@ -441,7 +420,6 @@ a:visited {
   align-self: flex-start;
   margin-left: 5%;
 }
-
 .formulario .fa-times {
   align-self: flex-end;
   margin: 4%;
@@ -450,7 +428,6 @@ a:visited {
 .formulario .fa-times:hover {
   cursor: pointer;
 }
-
 .fa-envelope,
 .fa-user {
   font-size: 1.5rem;
@@ -461,7 +438,6 @@ a:visited {
   border: none;
   border-radius: 5px;
 }
-
 .form-btn {
   padding: 1rem 3rem;
   margin: 30px 0;
@@ -479,7 +455,6 @@ a:visited {
   background: transparent;
   color: var(--mainGrey);
 }
-
 .formulario-hide {
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
     z-index 0s linear 0.01s;
@@ -487,9 +462,7 @@ a:visited {
   visibility: hidden;
   opacity: 0;
 }
-
 /* --------------- Formulario end---------------- */
-
 @media screen and (min-width: 768px) {
   .cart {
     width: 30vw;
