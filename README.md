@@ -2,6 +2,9 @@
 
 #### tienda de muebles
 
+**Live Preview**
+https://solismatias.github.io/comfyhouse/
+
 Este es un puequeño proyecto de practica basado en una tienda, donde se pueden agregar productos a un carrito, utilizando Javascript par la logica requerida y Contentful como base de datos
 
 
@@ -15,7 +18,6 @@ Este es un puequeño proyecto de practica basado en una tienda, donde se pueden 
 ![Imgur](https://imgur.com/FJ3L1LH.png)
 ![Imgur](https://imgur.com/GbzIdem.png)
 
-**Live Preview**
-https://solismatias.github.io/comfyhouse/
+
 
 Nota: este proyecto lo hice de la mano de un tutorial, si bien el html y css los modifique muy poco, trate de hacer la mayoria de la logica por mi cuenta 
